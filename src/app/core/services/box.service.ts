@@ -1,14 +1,14 @@
 import { Injectable } from '@angular/core';
-import { Stamp } from '../models/stamp';
+import { Box } from '../models/box';
 
 @Injectable({
   providedIn: 'root'
 })
-export class StampService {
+export class BoxService {
 
   constructor() { }
 
-  private stamps: Stamp[] = [
+  private boxs: Box[] = [
     {
       id: 1,
       description: 'un stamp n°1 de qualité supérieur',
@@ -80,9 +80,8 @@ export class StampService {
       createdDate: new Date(),
       updatedDate: new Date()
     }
-  ]
-
-  getAllStamps(): Stamp[] {
-    return this.stamps;
+  ];
+  getAllBoxs(): Box[] {
+    return this.boxs;
   }
 }
