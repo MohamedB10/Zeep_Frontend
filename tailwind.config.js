@@ -7,6 +7,9 @@ module.exports = {
     extend: {
       fontFamily: {
         sans: ['Roboto', 'ui-sans-serif', 'system-ui']
+      },
+      gridTemplateRows: {
+        '[auto,auto,1fr]': 'auto auto 1fr',
       }
     },
   },
