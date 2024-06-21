@@ -1,26 +1,24 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
-import { StampComponent } from './components/stamp/stamp.component';
-import { CoreModule } from '../core/core.module';
-import { BoxComponent } from './components/box/box.component';
-import { CustomStampComponent } from './components/custom-stamp/custom-stamp.component';
+import { FooterComponent } from './components/footer/footer.component';
+import { HeaderComponent } from './components/header/header.component';
+import { SidebarComponent } from './components/sidebar/sidebar.component';
 
 
 
 @NgModule({
   declarations: [
-    StampComponent,
-    BoxComponent,
-    CustomStampComponent
+    FooterComponent,
+    HeaderComponent,
+    SidebarComponent
   ],
   imports: [
     CommonModule,
-    CoreModule
   ],
   exports: [
-    StampComponent,
-    BoxComponent,
-    CustomStampComponent
+    FooterComponent,
+    HeaderComponent,
+    SidebarComponent
   ]
 })
 export class SharedModule { }
