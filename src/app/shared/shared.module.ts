@@ -3,6 +3,8 @@ import { CommonModule } from '@angular/common';
 import { FooterComponent } from './components/footer/footer.component';
 import { HeaderComponent } from './components/header/header.component';
 import { SidebarComponent } from './components/sidebar/sidebar.component';
+import { RouterLink } from '@angular/router';
+import { PublicRoutingModule } from '../features/public/public-routing.module';
 
 
 
@@ -14,6 +16,8 @@ import { SidebarComponent } from './components/sidebar/sidebar.component';
   ],
   imports: [
     CommonModule,
+    RouterLink,
+    PublicRoutingModule
   ],
   exports: [
     FooterComponent,

@@ -8,6 +8,9 @@ import { BoxComponent } from './components/box/box.component';
 import { CustomStampComponent } from './components/custom-stamp/custom-stamp.component';
 import { LandingPageComponent } from './components/landing-page/landing-page.component';
 import { StampComponent } from './components/stamp/stamp.component';
+import { LandingPageModule } from 'src/app/landing-page/landing-page.module';
+import { PublicComponent } from './public.component';
+import { RouterLink } from '@angular/router';
 
 
 @NgModule({
@@ -15,19 +18,23 @@ import { StampComponent } from './components/stamp/stamp.component';
     BoxComponent,
     CustomStampComponent,
     LandingPageComponent,
-    StampComponent
+    StampComponent,
+    PublicComponent
   ],
   imports: [
     CommonModule,
     PublicRoutingModule,
     SharedModule,
-    CoreModule
+    CoreModule,
+    LandingPageModule,
+    RouterLink
   ],
   exports: [
     BoxComponent,
     CustomStampComponent,
     LandingPageComponent,
-    StampComponent
+    StampComponent,
+    PublicComponent
   ]
 })
 export class PublicModule { }
