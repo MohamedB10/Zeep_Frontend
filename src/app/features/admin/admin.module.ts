@@ -7,6 +7,7 @@ import { ListStampsComponent } from './components/list-stamps/list-stamps.compon
 import { ListBoxsComponent } from './components/list-boxs/list-boxs.component';
 import { EditStampComponent } from './components/edit-stamp/edit-stamp.component';
 import { EditBoxComponent } from './components/edit-box/edit-box.component';
+import { CommandesComponent } from './components/commandes/commandes.component';
 
 
 
@@ -16,7 +17,8 @@ import { EditBoxComponent } from './components/edit-box/edit-box.component';
     ListStampsComponent,
     ListBoxsComponent,
     EditStampComponent,
-    EditBoxComponent
+    EditBoxComponent,
+    CommandesComponent
   ],
   imports: [
     CommonModule,
