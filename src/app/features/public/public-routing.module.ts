@@ -10,7 +10,7 @@ const routes: Routes = [
     children: [
       { path: 'stamps', component: StampComponent },
       { path: 'boxs', component: BoxComponent },
-      { path: 'edit-stamp', component: CustomStampComponent }
+      { path: 'stamps/:id', component: CustomStampComponent }
     ]
    }
 ];
