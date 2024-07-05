@@ -11,6 +11,7 @@ import { StampComponent } from './components/stamp/stamp.component';
 import { LandingPageModule } from 'src/app/landing-page/landing-page.module';
 import { PublicComponent } from './public.component';
 import { RouterLink } from '@angular/router';
+import { CommandesComponent } from './components/commandes/commandes.component';
 
 
 @NgModule({
@@ -19,7 +20,8 @@ import { RouterLink } from '@angular/router';
     CustomStampComponent,
     LandingPageComponent,
     StampComponent,
-    PublicComponent
+    PublicComponent,
+    CommandesComponent
   ],
   imports: [
     CommonModule,
@@ -34,7 +36,8 @@ import { RouterLink } from '@angular/router';
     CustomStampComponent,
     LandingPageComponent,
     StampComponent,
-    PublicComponent
+    PublicComponent,
+    CommandesComponent
   ]
 })
 export class PublicModule { }

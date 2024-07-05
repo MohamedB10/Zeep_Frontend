@@ -1,0 +1,37 @@
+<div class="mx-auto max-w-2xl text-center mt-10">
+    <h2 class="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Mes customs</h2>
+    <p class="mt-2 text-lg leading-8 text-gray-600">Aute magna irure deserunt veniam aliqua magna enim voluptate.</p>
+</div>
+
+<div class="flex justify-center items-center mt-10">
+    <table class="shadow-2xl border-2 border-cyan-200">
+        <thead>
+            <tr>
+                <th class="py-3 px-3 bg-cyan-800">N° de commande</th>
+                <th class="py-3 px-3 bg-cyan-800">N° du stamp</th>
+                <th class="py-3 px-3 bg-cyan-800">N° du boitier</th>
+                <th class="py-3 px-3 bg-cyan-800">Couleur de l'ancrier</th>
+                <th class="py-3 px-3 bg-cyan-800">Nombre d'ancrier</th>
+                <th class="py-3 px-3 bg-cyan-800">Nombre de boitier</th>
+                <th class="py-3 px-3 bg-cyan-800">Nombre de dateur</th>
+                <th class="py-3 px-3 bg-cyan-800">Etat</th>
+                <th class="py-3 px-3 bg-cyan-800">Date de création</th>
+                <th class="py-3 px-3 bg-cyan-800"></th>
+            </tr>
+        </thead>
+        <tbody class="text-cyan-900 text-center"  *ngFor="let commande of commandes">
+            <tr class="bg-cyan-200 hover:bg-cyan-100 hover:scale-105 cursor-pointer duration-300">
+                <td class="py-3 px-6">C{{commande.id}}</td>
+                <td class="py-3 px-6">S{{commande.stamp}}</td>
+                <td class="py-3 px-6">B{{commande.boitier}}</td>
+                <td class="py-3 px-6">{{commande.ancrier}}</td>
+                <td class="py-3 px-6">{{commande.nombre_ancrier}}</td>
+                <td class="py-3 px-6">{{commande.nombre_boitier}}</td>
+                <td class="py-3 px-6">{{commande.nombre_dateur}}</td>
+                <td class="py-3 px-6">{{commande.etat}}</td>
+                <td class="py-3 px-6">{{commande.createdDate | date: 'short'}}</td>
+                <td class="py-3 px-6"><button>valider</button></td>
+            </tr>
+        </tbody>
+    </table>
+</div>
