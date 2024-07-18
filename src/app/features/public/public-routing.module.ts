@@ -10,9 +10,9 @@ const routes: Routes = [
   { path: '', component: PublicComponent,
     children: [
       { path: 'stamps', component: StampComponent },
+      { path: 'stamps/:id', component: CustomStampComponent },
       { path: 'boxs', component: BoxComponent },
-      { path: 'commandes', component: CommandesComponent },
-      { path: 'stamps/:id', component: CustomStampComponent }
+      { path: 'commandes', component: CommandesComponent }
     ]
    }
 ];

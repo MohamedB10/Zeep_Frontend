@@ -20,7 +20,7 @@ export class StampComponent implements OnInit {
   ngOnInit(): void {
     this.stamps = this.stampService.getAllStamps();
   }
-  onClickStamp() {
-      this.router.navigateByUrl(`stamps/${this.stamp.id}`);
-    }
+  onClickStamp(id: number | undefined) {
+      this.router.navigateByUrl(`zeep_frontend/public/stamps/${id}`);
+  }
 }
