@@ -1,12 +1,14 @@
 import { Injectable } from '@angular/core';
 import { Stamp } from '../models/stamp';
+import { HttpClient } from '@angular/common/http';
+import { Observable } from 'rxjs';
 
 @Injectable({
   providedIn: 'root'
 })
 export class StampService {
 
-  constructor() { }
+  constructor(private http: HttpClient) { }
 
   private stamps: Stamp[] = [
     {
@@ -82,7 +84,11 @@ export class StampService {
     }
   ]
 
-  getAllStamps(): Stamp[] {
-    return this.stamps;
+  getAllStamps(): Observable<Stamp[]> {
+    return this.http.get<Stamp[]>('http://localhost:3000/stamps');
+  }
+
+  getStampById(stampId: any): Observable<Stamp> {
+    return this.http.get<Stamp>(`http://localhost:3000/stamps/${stampId}`);
   }
 }

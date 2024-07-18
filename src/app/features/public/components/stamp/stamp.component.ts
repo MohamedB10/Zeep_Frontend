@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
+import { Observable } from 'rxjs';
 import { Stamp } from 'src/app/core/models/stamp';
 import { StampService } from 'src/app/core/services/stamp.service';
 
@@ -15,10 +16,10 @@ export class StampComponent implements OnInit {
               private router: Router
   ) { }
 
-  stamps!: Stamp[];
+  stamps$!: Observable<Stamp[]>;
 
   ngOnInit(): void {
-    this.stamps = this.stampService.getAllStamps();
+    this.stamps$ = this.stampService.getAllStamps();
   }
   onClickStamp(id: number | undefined) {
       this.router.navigateByUrl(`zeep_frontend/public/stamps/${id}`);

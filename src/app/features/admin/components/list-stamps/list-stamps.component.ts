@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Stamp } from 'src/app/core/models/stamp';
 import { StampService } from 'src/app/core/services/stamp.service';
 
@@ -11,10 +12,10 @@ export class ListStampsComponent implements OnInit {
 
   constructor(private stampService: StampService) { }
 
-  stamps!: Stamp[];
+  stamps$!: Observable<Stamp[]>;
 
   ngOnInit(): void {
-    this.stamps = this.stampService.getAllStamps();
+    this.stamps$ = this.stampService.getAllStamps();
   }
 
 }
